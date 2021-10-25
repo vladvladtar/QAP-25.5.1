@@ -12,7 +12,7 @@ element = WebDriverWait(driver, 10).until(
 
 @pytest.fixture(autouse=True)
 def testing():
-   pytest.driver = webdriver.Chrome(r'e:C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')
+   pytest.driver = webdriver.Chrome(r'e:C:\Python\Python39\chromedriver\chromedriver.exe')
    pytest.driver.get('http://petfriends1.herokuapp.com/login') # Переходим на страницу авторизации
    pytest.driver.find_element_by_id('email').send_keys('vlad.vlad@qip.ru')
    pytest.driver.find_element_by_id('pass').send_keys('Acdc')
